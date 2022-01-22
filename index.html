@@ -3,16 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>Qiita CSS container query polyfill</title>
   </head>
   <body>
-    <div>
-      <header>
-        <h1>Container Query Polyfill</h1>
+    <div class="container">
+      <header class="header">
+        <h1 class="header__title">Container Query Polyfill</h1>
       </header>
-      <nav>
-        <ul>
+      <nav class="navigation">
+        <ul class="navigation__list">
           <li><a href="#">ホーム</a></li>
           <li><a href="#">検索</a></li>
           <li><a href="#">通知</a></li>
@@ -20,92 +26,243 @@
           <li><a href="#">メッセージ</a></li>
         </ul>
       </nav>
-      <main>
-        <div>
+      <main class="main">
+        <a href="#" class="card">
           <img
             src="https://picsum.photos/128?random=1"
             alt=""
             width="64"
             height="64"
+            class="card__image"
           />
-          <h2>コンテンツ1</h2>
-          <img
-            src="https://picsum.photos/48?random=1"
-            alt=""
-            width="24"
-            height="24"
-          />
-          <span>ユーザー1</span>
-          <time datetime="2022-01-22">4時間前</time>
-        </div>
-        <div>
+          <div class="card__body">
+            <h2 class="card__title">コンテンツ1</h2>
+            <div class="card__notes">
+              <img
+                src="https://picsum.photos/48?random=1"
+                alt=""
+                width="24"
+                height="24"
+                class="card__user-icon"
+              />
+              <span class="card__user-name">ユーザー1</span>
+              <time datetime="2022-01-22" class="card__posted-at">4時間前</time>
+            </div>
+          </div>
+        </a>
+        <a href="#" class="card">
           <img
             src="https://picsum.photos/128?random=2"
             alt=""
             width="64"
             height="64"
+            class="card__image"
           />
-          <h2>コンテンツ2</h2>
-          <img
-            src="https://picsum.photos/48?random=2"
-            alt=""
-            width="24"
-            height="24"
-          />
-          <span>ユーザー2</span>
-          <time datetime="2022-01-22">13時間前</time>
-        </div>
-        <div>
+          <div class="card__body">
+            <h2 class="card__title">少し長いタイトルのコンテンツ2</h2>
+            <div class="card__notes">
+              <img
+                src="https://picsum.photos/48?random=2"
+                alt=""
+                width="24"
+                height="24"
+                class="card__user-icon"
+              />
+              <span class="card__user-name">少し名前の長いユーザー2</span>
+              <time datetime="2022-01-22" class="card__posted-at"
+                >13時間前</time
+              >
+            </div>
+          </div>
+        </a>
+        <a href="#" class="card">
           <img
             src="https://picsum.photos/128?random=3"
             alt=""
             width="64"
             height="64"
+            class="card__image"
           />
-          <h2>コンテンツ3</h2>
-          <img
-            src="https://picsum.photos/48?random=3"
-            alt=""
-            width="24"
-            height="24"
-          />
-          <span>ユーザー3</span>
-          <time datetime="2022-01-21">1日前</time>
-        </div>
-        <div>
+          <div class="card__body">
+            <h2 class="card__title">
+              まあまあ長いタイトルで2行にまたがって表示されているコンテンツ3
+            </h2>
+            <div class="card__notes">
+              <img
+                src="https://picsum.photos/48?random=3"
+                alt=""
+                width="24"
+                height="24"
+                class="card__user-icon"
+              />
+              <span class="card__user-name"
+                >相当名前が長くて割と表示エリアの広いユーザー3</span
+              >
+              <time datetime="2022-01-21" class="card__posted-at">1日前</time>
+            </div>
+          </div>
+        </a>
+        <a href="#" class="card">
           <img
             src="https://picsum.photos/128?random=4"
             alt=""
             width="64"
             height="64"
+            class="card__image"
           />
-          <h2>コンテンツ4</h2>
-          <img
-            src="https://picsum.photos/48?random=4"
-            alt=""
-            width="24"
-            height="24"
-          />
-          <span>ユーザー4</span>
-          <time datetime="2022-01-21">1日前</time>
-        </div>
-        <div>
+          <div class="card__body">
+            <h2 class="card__title">コンテンツ4</h2>
+            <div class="card__notes">
+              <img
+                src="https://picsum.photos/48?random=4"
+                alt=""
+                width="24"
+                height="24"
+                class="card__user-icon"
+              />
+              <span class="card__user-name">ユーザー4</span>
+              <time datetime="2022-01-21" class="card__posted-at">1日前</time>
+            </div>
+          </div>
+        </a>
+        <a href="#" class="card">
           <img
             src="https://picsum.photos/128?random=5"
             alt=""
             width="64"
             height="64"
+            class="card__image"
           />
-          <h2>コンテンツ5</h2>
+          <div class="card__body">
+            <h2 class="card__title">コンテンツ5</h2>
+            <div class="card__notes">
+              <img
+                src="https://picsum.photos/48?random=5"
+                alt=""
+                width="24"
+                height="24"
+                class="card__user-icon"
+              />
+              <span class="card__user-name">ユーザー5</span>
+              <time datetime="2022-01-20" class="card__posted-at">2日前</time>
+            </div>
+          </div>
+        </a>
+        <a href="#" class="card">
           <img
-            src="https://picsum.photos/48?random=5"
+            src="https://picsum.photos/128?random=6"
             alt=""
-            width="24"
-            height="24"
+            width="64"
+            height="64"
+            class="card__image"
           />
-          <span>ユーザー5</span>
-          <time datetime="2022-01-20">2日前</time>
-        </div>
+          <div class="card__body">
+            <h2 class="card__title">コンテンツ6</h2>
+            <div class="card__notes">
+              <img
+                src="https://picsum.photos/48?random=6"
+                alt=""
+                width="24"
+                height="24"
+                class="card__user-icon"
+              />
+              <span class="card__user-name">ユーザー6</span>
+              <time datetime="2022-01-20" class="card__posted-at">2日前</time>
+            </div>
+          </div>
+        </a>
+        <a href="#" class="card">
+          <img
+            src="https://picsum.photos/128?random=7"
+            alt=""
+            width="64"
+            height="64"
+            class="card__image"
+          />
+          <div class="card__body">
+            <h2 class="card__title">コンテンツ7</h2>
+            <div class="card__notes">
+              <img
+                src="https://picsum.photos/48?random=7"
+                alt=""
+                width="24"
+                height="24"
+                class="card__user-icon"
+              />
+              <span class="card__user-name">ユーザー7</span>
+              <time datetime="2022-01-20" class="card__posted-at">2日前</time>
+            </div>
+          </div>
+        </a>
+        <a href="#" class="card">
+          <img
+            src="https://picsum.photos/128?random=8"
+            alt=""
+            width="64"
+            height="64"
+            class="card__image"
+          />
+          <div class="card__body">
+            <h2 class="card__title">コンテンツ8</h2>
+            <div class="card__notes">
+              <img
+                src="https://picsum.photos/48?random=8"
+                alt=""
+                width="24"
+                height="24"
+                class="card__user-icon"
+              />
+              <span class="card__user-name">ユーザー8</span>
+              <time datetime="2022-01-19" class="card__posted-at">3日前</time>
+            </div>
+          </div>
+        </a>
+        <a href="#" class="card">
+          <img
+            src="https://picsum.photos/128?random=9"
+            alt=""
+            width="64"
+            height="64"
+            class="card__image"
+          />
+          <div class="card__body">
+            <h2 class="card__title">コンテンツ9</h2>
+            <div class="card__notes">
+              <img
+                src="https://picsum.photos/48?random=9"
+                alt=""
+                width="24"
+                height="24"
+                class="card__user-icon"
+              />
+              <span class="card__user-name">ユーザー9</span>
+              <time datetime="2022-01-19" class="card__posted-at">3日前</time>
+            </div>
+          </div>
+        </a>
+        <a href="#" class="card">
+          <img
+            src="https://picsum.photos/128?random=10"
+            alt=""
+            width="64"
+            height="64"
+            class="card__image"
+          />
+          <div class="card__body">
+            <h2 class="card__title">コンテンツ10</h2>
+            <div class="card__notes">
+              <img
+                src="https://picsum.photos/48?random=10"
+                alt=""
+                width="24"
+                height="24"
+                class="card__user-icon"
+              />
+              <span class="card__user-name">ユーザー10</span>
+              <time datetime="2022-01-19" class="card__posted-at">3日前</time>
+            </div>
+          </div>
+        </a>
       </main>
     </div>
   </body>
